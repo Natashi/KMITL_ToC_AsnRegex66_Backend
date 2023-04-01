@@ -1,11 +1,9 @@
 import scraping_ver_06
-from flask import Flask, request, jsonify
+from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-
-@app.route('/', methods=['GET'])
-def home():
-	return '<h1>Hello, World!</h1>'
+CORS(app)
 
 @app.get("/all_temples")
 def get_temples():
@@ -20,4 +18,6 @@ def get_temple_in_province(province_name):
 	except ValueError:
 		return "Province not supported", 400
 
-app.run(host="0.0.0.0", port=5001, debug=True)
+app.run(host="0.0.0.0", port=5001, debug=False)
+
+
