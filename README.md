@@ -24,4 +24,5 @@ Example:
 ```
 
 ### Docker
-build docker using docker build -t backend .
+
+build docker image using "docker build -t backend ."
