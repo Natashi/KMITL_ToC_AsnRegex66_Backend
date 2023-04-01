@@ -15,3 +15,5 @@ def get_temple_in_province(province_name):
 		return jsonify([x for key in res for x in res[key]])
 	except ValueError:
 		return "Province not supported", 400
+	
+app.run(debug=False, port=5001, ssl_context='adhoc')
