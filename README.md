@@ -22,3 +22,7 @@ Example:
 ```
 /province_temple/trang
 ```
+
+### Docker
+
+build docker image using "docker build -t backend ."
